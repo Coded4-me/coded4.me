@@ -40,14 +40,12 @@ nav {
             border-radius: 16px;
     
             &:hover {
-                background: rgba(255, 255, 255, 0.70);
+                background: rgba(0, 0, 0, 1);
+                color: #fff;
+                border-color: transparent;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                 backdrop-filter: blur(5.1px);
                 -webkit-backdrop-filter: blur(5.1px);
-
-                & .code-chevron {
-                    color: #000;
-                }
             }
         }
     }
@@ -63,14 +61,12 @@ nav {
         border-color: rgba(0, 0, 0, 0.24);
 
         &:hover {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(255, 255, 255, 1);
+            border-color: transparent;
+            color: #000;
             box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5.1px);
             -webkit-backdrop-filter: blur(5.1px);
-
-            & .code-chevron {
-                color: #fff;
-            }
         }
     }
 }
