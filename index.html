@@ -10,16 +10,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Coded4</title>
 </head>
-<body>
+<body class="dark">
     <nav>
         <ul>
             <li><a href="/"><img src="./images/logo_black-horizontal.svg" alt="Logo Coded4" class="nav-logo"></a></li>
             <li><a href="/about"><span class="code-chevron">&lt;</span>About us<span class="code-chevron">/&gt;</span></a></li>
+            <li><a href="/services"><span class="code-chevron">&lt;</span>Services<span class="code-chevron">/&gt;</span></a></li>
             <li><a href="/contact"><span class="code-chevron">&lt;</span>Contact<span class="code-chevron">/&gt;</span></a></li>
+            <li><a href="#" onclick="changeTheme('dark')"><span class="code-chevron">&lt;</span>Dark<span class="code-chevron">/&gt;</span></a></li>
+            <li><a href="#" onclick="changeTheme('light')"><span class="code-chevron">&lt;</span>Light<span class="code-chevron">/&gt;</span></a></li>
         </ul>
     </nav>
     <main>
         <img src="./images/logo_black-horizontal.svg" alt="Logo Coded4" class="main-logo">
     </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -5,6 +5,10 @@ body {
   position: relative;
 }
 
+.dark {
+    background-color: #121212
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -21,7 +25,7 @@ nav {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     list-style: none;
 
     li {
@@ -32,27 +36,65 @@ nav {
             font-weight: 300;
             transition: all 0.3s ease-in-out;
             padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
     
             &:hover {
-                color: #fff;
-                background-color: #000;
-                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.70);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5.1px);
+                -webkit-backdrop-filter: blur(5.1px);
+
+                & .code-chevron {
+                    color: #000;
+                }
             }
         }
     }
   }
 }
 
+.dark nav {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.24);
+
+    ul li a:not(:has(img)) {
+        color: #fff;
+        border-color: rgba(0, 0, 0, 0.24);
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5.1px);
+            -webkit-backdrop-filter: blur(5.1px);
+
+            & .code-chevron {
+                color: #fff;
+            }
+        }
+    }
+}
+
 .nav-logo {
     width: 160px;
     height: 60px;
+    filter: invert(1);
 }
 
+body:not(.dark) .nav-logo {
+    filter: invert(0);
+}
+
+
 .code-chevron {
-    color: #fff;
+    color: #000;
     font-size: 1.1rem;
     font-weight: 300;
     transition: all 0.3s ease-in-out;
+}
+
+body:not(.dark) .code-chevron {
+    color: #fff;
 }
 
 main {
@@ -67,4 +109,9 @@ main {
     left: 50%;
     transform: translate(-50%, 30%);
     z-index: 1;
+    filter: invert(1);
+}
+
+body:not(.dark) .main-logo {
+    filter: invert(0);
 }
