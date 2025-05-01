@@ -8,6 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Titillium+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("BVMWCkRISMhoP3SlI"); // trouvé dans Account > API Keys
+    })();
+    </script>
     <title>Coded4</title>
 </head>
 <body>
@@ -173,6 +179,51 @@
             <p>Optez pour notre option à <span class="home-intro-text-underline">20€ / mois</span> pour un support dédié qui s’occupera des modifications nécessaires, même après la réalisation de votre projet par notre équipe.</p>
         </div>
     </section>
+
+    <div class="contact">
+        <form id="contact-form">
+            <div class="contact-form-container contact-name">
+                <div class="contact-form-label ">
+                    <label for="">Nom</label>
+                    <input type="text" name="name" placeholder="Jean Dupont" required>
+                </div>
+                <div class="contact-form-label ">
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="" placeholder="email@email.com" required>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="contact-form-label">
+                    <label for="">Téléphone</label>
+                    <input type="number" name="phone" id="" placeholder="01 23 45 67 89" required maxlength="10>">
+                </div>
+                
+                <div class="contact-form-label">
+                    <label for="">Société</label>
+                    <input type="text" name="company" placeholder="Entreprise" required>
+                </div>
+            </div>
+
+            <div class="contact-form-label full-width">
+                <label for="">Message</label>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+          </form> 
+          <div class="contact-info">
+            <p> CONTACT US</p>
+            <h2> Get in touch today</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipiscing elit nulla adipiscing tincidunt interdum tellus du.</p>
+
+            <div class="flex"><img src="./images/Email.svg" alt=""><p>contact@coded4.me</p></div>
+            <div class="flex"> <img src="./images/Phone.svg" alt=""> <p>06 12 34 56 78</p></div>
+            <div class="flex"> <img src="./images/Mark.svg" alt=""><p>61 rue de Lyon, Paris, 75015</p></div>
+            
+           
+            
+          </div>      
+        </div>
 
     <script src="./script.js"></script>
 </body>

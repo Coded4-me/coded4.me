@@ -7,3 +7,14 @@ const changeTheme = (theme) => {
         body.classList.remove('dark');
     }
 }
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_hejqo4q', 'template_dtlmxwe', this)
+      .then(() => {
+        alert('Message envoyé !');
+      }, (err) => {
+        alert('Erreur : ' + JSON.stringify(err));
+      });
+  });
