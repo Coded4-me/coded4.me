@@ -12,17 +12,39 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/"><img src="./images/logo_black-horizontal.svg" alt="Logo Coded4" class="nav-logo"></a></li>
-            <li><a href="/about"><span class="code-chevron">&lt;</span>About us<span class="code-chevron">/&gt;</span></a></li>
-            <li><a href="/services"><span class="code-chevron">&lt;</span>Services<span class="code-chevron">/&gt;</span></a></li>
-            <li><a href="/contact"><span class="code-chevron">&lt;</span>Contact<span class="code-chevron">/&gt;</span></a></li>
-            <li><a href="#" onclick="changeTheme('dark')"><span class="code-chevron">&lt;</span>Dark<span class="code-chevron">/&gt;</span></a></li>
-            <li><a href="#" onclick="changeTheme('light')"><span class="code-chevron">&lt;</span>Light<span class="code-chevron">/&gt;</span></a></li>
+        <ul class="nav-list">
+            <div class="nav-logo">
+                <li><a href="/"><img src="./images/logo_white-horizontal.svg" alt="Logo Coded4" class="nav-logo"></a></li>
+            </div>
+            <div class="nav-links">
+                <li><a href="/about"><span class="code-chevron">&lt;</span>Home<span class="code-chevron">/&gt;</span></a></li>
+                <li><a href="/services"><span class="code-chevron">&lt;</span>Features<span class="code-chevron">/&gt;</span></a></li>
+                <li><a href="/contact"><span class="code-chevron">&lt;</span>Contact<span class="code-chevron">/&gt;</span></a></li>
+                <li><a href="/contact"><span class="code-chevron">&lt;</span>Get started<span class="code-chevron">/&gt;</span></a></li>
+            </div>
+<!--             <li><a href="#" onclick="changeTheme('dark')"><span class="code-chevron">&lt;</span>Dark<span class="code-chevron">/&gt;</span></a></li>
+            <li><a href="#" onclick="changeTheme('light')"><span class="code-chevron">&lt;</span>Light<span class="code-chevron">/&gt;</span></a></li> -->
         </ul>
     </nav>
     <main>
-        <img src="./images/logo_black-horizontal.svg" alt="Logo Coded4" class="main-logo">
+        <!-- <img src="./images/logo_black-horizontal.svg" alt="Logo Coded4" class="main-logo"> -->
+         <div class="home-intro"> 
+                <h1 class="home-intro-text"> <div class="home-intro-text-1"> A <div class="home-intro-text-underline"> dedicated </div> team to </div> <div class="home-intro-text-2"> grow your <div class="home-intro-text-underline">company </div> </div> </h1>
+            <p class="home-intro-p"> Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis </br> sit aliquam sit nullam neque ultrices.</p>
+            <div class="home-intro-buttons">
+                <a href="/contact" class="btn btn-primary">Get started <span>&rarr;</span> </a>
+                <a href="/about" class="btn btn-secondary">Contact us</a>
+            </div>
+         </div>
+
+         <div class="home-logo">
+            <img src="./images/Google.svg" alt="">
+            <img src="./images/Facebook.svg" alt="">
+            <img src="./images/YouTube.svg" alt="">
+            <img src="./images/Pinterest.svg" alt="">
+            <img src="./images/Twitch.svg" alt="">
+            <img src="./images/Webflow.svg" alt="">
+         </div>
     </main>
 
     <script src="./script.js"></script>
