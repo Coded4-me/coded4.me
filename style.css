@@ -389,29 +389,27 @@ h4 {
 
 .home-logo {
   background-color: #57cc99;
-  padding-bottom: 35px;
-  padding-top: 35px;
-  width: 100%;
+  padding-block: 35px;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .home-logo-track {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  animation: scroll 20s linear infinite;
+  display: inline-block;
+  animation: 20s scroll infinite linear;
 }
 
 .home-logo img {
   width: 100px;
+  margin: 0 40px;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 }
 
