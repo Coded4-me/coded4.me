@@ -1,3 +1,10 @@
+const randomizeMainColor = () => {
+    const randomColor = `${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
+    document.documentElement.style.setProperty('--main-color', `rgb(${randomColor}`);
+    document.documentElement.style.setProperty('--main-color-40', `rgba(${randomColor}, 0.4)`);
+    document.documentElement.style.setProperty('--main-color-80', `rgba(${randomColor}, 0.8)`);
+}
+
 const animatedElements = document.querySelectorAll(".animate");
 
 const observer = new IntersectionObserver(
