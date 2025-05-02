@@ -45,7 +45,7 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 .nav-links a:hover {
-  color: #57cc99;
+  color: var(--25bd5a, #25bd5a);
 }
 
 /* Burger menu */
@@ -111,8 +111,8 @@ main {
 
 .home-intro-text-underline {
   font-weight: bold;
-  color: #57cc99;
-  text-decoration: underline solid #57cc99;
+  color: #25bd5a;
+  text-decoration: underline solid #25bd5a;
 }
 
 .home-intro-p {
@@ -148,25 +148,26 @@ main {
 }
 
 .btn-primary {
-  background: var(--57cc99, #57cc99);
+  background: var(--25bd5a, #25bd5a);
   color: #121212;
 
   &:hover {
-    background: rgba(87, 204, 153, 0.8);
+    background: rgba(26, 189, 8, 0.8);
     border-color: transparent;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.1px);
+    color: black !important;
     -webkit-backdrop-filter: blur(5.1px);
   }
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--57cc99, #57cc99);
-  border: 1px solid var(--57cc99, #57cc99);
+  color: var(--25bd5a, #25bd5a);
+  border: 1px solid var(--25bd5a, #25bd5a);
 
   &:hover {
-    background: var(--57cc99, #57cc99);
+    background: var(--25bd5a, #25bd5a);
     color: #fffdfa;
     border-color: transparent;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -181,7 +182,7 @@ main {
   border: 1px solid rgba(255, 253, 250, 0.2);
 
   &:hover {
-    background: var(--57cc99, #57cc99);
+    background: var(--25bd5a, #25bd5a);
     color: #fffdfa;
     border-color: transparent;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -248,7 +249,7 @@ h4 {
     gap: 20px;
     padding: 32px;
     border-radius: 24px;
-    border: 1px solid var(--57cc99, #57cc99);
+    border: 1px solid var(--25bd5a, #25bd5a);
     color: #fffdfa;
     text-align: center;
     transform-style: preserve-3d;
@@ -265,7 +266,7 @@ h4 {
     }
 
     & h4 {
-      color: var(--57cc99, #57cc99);
+      color: var(--25bd5a, #25bd5a);
       font-size: 24px;
     }
   }
@@ -293,7 +294,7 @@ h4 {
 
     &.best-offer {
       background: transparent;
-      border: 1px solid var(--57cc99, #57cc99);
+      border: 1px solid var(--25bd5a, #25bd5a);
     }
 
     & .pricing-offer {
@@ -314,7 +315,7 @@ h4 {
     }
 
     & .pricing-price {
-      color: var(--57cc99, #57cc99);
+      color: var(--25bd5a, #25bd5a);
       font-size: 32px;
       font-weight: 700;
 
@@ -409,7 +410,7 @@ h4 {
 }
 
 .home-logo {
-  background-color: #57cc99;
+  background-color: var(--3aa760, #3aa760);
   padding-block: 35px;
   overflow: hidden;
   white-space: nowrap;
