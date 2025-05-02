@@ -27,17 +27,36 @@ animatedElements.forEach((element) => {
     observer.observe(element);
 });
 
+const newsletterConfirmation = document.querySelector('.newsletter-confirmation');
+const contactConfirmation = document.querySelector('.contact-confirmation');
 
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     emailjs.sendForm('service_hejqo4q', 'template_dtlmxwe', this)
       .then(() => {
-        alert('Message envoyé !');
+        contactConfirmation.style.display = 'block'; 
+        setTimeout(() => {
+            contactConfirmation.style.display = 'none'; 
+        }, 10000);
       }, (err) => {
         alert('Erreur : ' + JSON.stringify(err));
       });
   });
+
+document.getElementById('contact-newsletter').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_hejqo4q', 'template_a23dyfc', this)
+      .then(() => {
+        newsletterConfirmation.style.display = 'block'; 
+        setTimeout(() => {
+            newsletterConfirmation.style.display = 'none'; 
+        }, 10000);
+      }, (err) => {
+        alert('Erreur : ' + JSON.stringify(err));
+      });
+});  
 
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('nav-links');

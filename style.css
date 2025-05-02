@@ -540,6 +540,17 @@ footer {
   }
 }
 
+.contact-confirmation {
+  display: none;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+.newsletter-confirmation {
+  display: none;
+}
+
 .full-width {
   width: 100%;
 }
