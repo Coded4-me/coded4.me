@@ -1,7 +1,10 @@
 :root {
-  --main-color: rgb(0, 173, 181);
-  --main-color-40: rgba(0, 173, 181, 0.4);
-  --main-color-80: rgba(0, 173, 181, 0.8);
+  /* --main-color: rgb(0, 173, 181); */
+  --main-color: rgb(37, 189, 90);
+  /* --main-color-40: rgba(0, 173, 181, 0.4); */
+  --main-color-40: rgba(37, 189, 90, 0.4);
+  /* --main-color-80: rgba(0, 173, 181, 0.8); */
+  --main-color-80: rgba(37, 189, 90, 0.8);
 }
 
 body {
