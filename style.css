@@ -197,6 +197,8 @@ section {
   gap: 12px;
   padding-block: 60px;
   padding-inline: 100px;
+  max-width: 1400px;
+  margin: 0 auto;
 
   & .section-p {
     color: #fffdfa;
