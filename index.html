@@ -253,78 +253,23 @@
         </div>
     </section>
 
+    <hr>
+
+    <footer>
+        <div>
+            <img src="./images/logo_white-horizontal.svg" alt="Logo Coded4" class="footer-logo">
+            <p>Copyright &copy;2025 Coded4 | <br/> Tous droits réservés</p>
+        </div>
+        <div>
+            <h4>Inscrivez-vous à notre <span class="home-intro-text-underline">newsletter</span></h4>
+            <form class="flex">
+                <input type="email" name="email" id="email" placeholder="Entrez votre email" required>
+                <button class="btn btn-small btn-primary" type="submit">Inscrivez-vous</button>
+            </form>
+        </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('nav-links');
-        let isMenuOpen = false;
-
-        burger.addEventListener('click', () => {
-        if (!isMenuOpen) {
-            navLinks.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Disable scrolling
-
-            anime({
-            targets: navLinks,
-            translateY: [-50, 0],
-            opacity: [0, 1],
-            duration: 500,
-            easing: 'easeOutQuad'
-            });
-
-            isMenuOpen = true;
-        } else {
-            anime({
-            targets: navLinks,
-            translateY: [0, -50],
-            opacity: [1, 0],
-            duration: 400,
-            easing: 'easeInQuad',
-            complete: () => {
-            navLinks.style.display = 'none';
-            document.body.style.overflow = ''; // Enable scrolling
-            }
-            });
-
-            isMenuOpen = false;
-        }
-        });
-
-
-        // Animation for the tilt effect on cards
-        const cards = document.querySelectorAll('.tilt');
-
-        cards.forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = ((y - centerY) / centerY) * 10;
-                const rotateY = ((x - centerX) / centerX) * -10;
-
-                anime({
-                targets: card,
-                rotateX,
-                rotateY,
-                duration: 300,
-                easing: 'easeOutQuad'
-                });
-            });
-
-            card.addEventListener('mouseleave', () => {
-                anime({
-                targets: card,
-                rotateX: 0,
-                rotateY: 0,
-                duration: 500,
-                easing: 'easeOutElastic(1, .5)'
-                });
-            });
-        });
-    </script>
     <script type="module">
         import { createAnimatable } from 'https://cdn.skypack.dev/animejs';
       

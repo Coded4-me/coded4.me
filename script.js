@@ -38,3 +38,73 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         alert('Erreur : ' + JSON.stringify(err));
       });
   });
+
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+let isMenuOpen = false;
+
+burger.addEventListener('click', () => {
+if (!isMenuOpen) {
+    navLinks.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+
+    anime({
+    targets: navLinks,
+    translateY: [-50, 0],
+    opacity: [0, 1],
+    duration: 500,
+    easing: 'easeOutQuad'
+    });
+
+    isMenuOpen = true;
+} else {
+    anime({
+    targets: navLinks,
+    translateY: [0, -50],
+    opacity: [1, 0],
+    duration: 400,
+    easing: 'easeInQuad',
+    complete: () => {
+    navLinks.style.display = 'none';
+    document.body.style.overflow = ''; // Enable scrolling
+    }
+    });
+
+    isMenuOpen = false;
+}
+});
+
+
+// Animation for the tilt effect on cards
+const cards = document.querySelectorAll('.tilt');
+
+cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * -10;
+
+        anime({
+        targets: card,
+        rotateX,
+        rotateY,
+        duration: 300,
+        easing: 'easeOutQuad'
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        anime({
+        targets: card,
+        rotateX: 0,
+        rotateY: 0,
+        duration: 500,
+        easing: 'easeOutElastic(1, .5)'
+        });
+    });
+});

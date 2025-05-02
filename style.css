@@ -139,6 +139,7 @@ main {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   text-align: center;
+  white-space: nowrap;
 }
 
 .btn-small {
@@ -500,6 +501,40 @@ h4 {
   flex: 1;
 }
 
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
+  background-color: #121212;
+  color: #fffdfa;
+
+  & div {
+    flex: 1;
+  }
+
+  & .footer-logo {
+    width: 200px;
+  }
+
+  & form {
+    align-items: center;
+
+    input {
+      width: 100%;
+      height: fit-content;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 253, 250, 0.2);
+      background-color: transparent;
+      color: #fffdfa;
+      font-size: 16px;
+      font-weight: 300;
+      background-color: #2f2f2f;
+    }
+  }
+}
+
 .full-width {
   width: 100%;
 }
@@ -565,6 +600,11 @@ h4 {
         font-size: 12px;
       }
     }
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    padding: 20px;
   }
 }
 
