@@ -17,25 +17,38 @@
     <title>Coded4</title>
 </head>
 <body>
+    <div class="halo-wrapper">
+        <div class="halo"></div>
+    </div>
+
     <nav>
-        <ul class="nav-list">
-            <div class="nav-logo">
-                <li><a href="/"><img src="./images/logo_white-horizontal.svg" alt="Logo Coded4" class="nav-logo"></a></li>
-            </div>
-            <div class="nav-links">
-                <li><a href="#"><span class="code-chevron">&lt;</span>Home<span class="code-chevron">/&gt;</span></a></li>
-                <li><a href="#features"><span class="code-chevron">&lt;</span>Features<span class="code-chevron">/&gt;</span></a></li>
-                <li><a href="#contact"><span class="code-chevron">&lt;</span>Contact<span class="code-chevron">/&gt;</span></a></li>
-                <li><a href="/devis" class="btn btn-primary"><span class="code-chevron">&lt;</span>Get started<span class="code-chevron">/&gt;</span></a></li>
-            </div>
-<!--             <li><a href="#" onclick="changeTheme('dark')"><span class="code-chevron">&lt;</span>Dark<span class="code-chevron">/&gt;</span></a></li>
-            <li><a href="#" onclick="changeTheme('light')"><span class="code-chevron">&lt;</span>Light<span class="code-chevron">/&gt;</span></a></li> -->
-        </ul>
-    </nav>
-    <main>
+        <div class="nav-container">
+          <a href="/" class="nav-logo">
+            <img src="./images/logo_white-horizontal.svg" alt="Logo Coded4" />
+          </a>
+      
+          <!-- Icône burger -->
+          <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      
+          <!-- Menu navigation -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#">&lt;Home/&gt;</a></li>
+            <li><a href="#features">&lt;Features/&gt;</a></li>
+            <li><a href="#contact">&lt;Contact/&gt;</a></li>
+            <li><a href="/devis" class="btn btn-small btn-primary">&lt;Get started/&gt;</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+
+    <main class="animate" data-animate-direction="left">
         <!-- <img src="./images/logo_black-horizontal.svg" alt="Logo Coded4" class="main-logo"> -->
          <div class="home-intro"> 
-                <h1 class="home-intro-text"> <div class="home-intro-text-1"> A <div class="home-intro-text-underline"> dedicated </div> team to </div> <div class="home-intro-text-2"> grow your <div class="home-intro-text-underline">company </div> </div> </h1>
+                <h1 class="home-intro-text">A <span class="home-intro-text-underline"> dedicated </span> team to grow your <span class="home-intro-text-underline">company</span></h1>
             <p class="home-intro-p"> Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis </br> sit aliquam sit nullam neque ultrices.</p>
             <div class="home-intro-buttons">
                 <a href="/devis" class="btn btn-primary">Get started <span>&rarr;</span> </a>
@@ -44,16 +57,25 @@
          </div>
 
          <div class="home-logo">
-            <img src="./images/Google.svg" alt="">
-            <img src="./images/Facebook.svg" alt="">
-            <img src="./images/YouTube.svg" alt="">
-            <img src="./images/Pinterest.svg" alt="">
-            <img src="./images/Twitch.svg" alt="">
-            <img src="./images/Webflow.svg" alt="">
+            <div class="home-logo-track">
+                <img src="./images/Google.svg" alt="">
+                <img src="./images/Facebook.svg" alt="">
+                <img src="./images/YouTube.svg" alt="">
+                <img src="./images/Pinterest.svg" alt="">
+                <img src="./images/Twitch.svg" alt="">
+                <img src="./images/Webflow.svg" alt="">
+
+                <img src="./images/Google.svg" alt="">
+                <img src="./images/Facebook.svg" alt="">
+                <img src="./images/YouTube.svg" alt="">
+                <img src="./images/Pinterest.svg" alt="">
+                <img src="./images/Twitch.svg" alt="">
+                <img src="./images/Webflow.svg" alt="">
+            </div>
          </div>
     </main>
 
-    <section>
+    <section class="animate" data-animate-direction="right">
         <h2>FEATURES</h2>
         <h3>Browse our set of <span class="home-intro-text-underline">features</span></h3>
         <p class="section-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quasi delectus reprehenderit tempore pariatur ab dolor laudantium natus, totam ullam quos quas itaque quidem suscipit in voluptas dolorem nemo quaerat.</p>
@@ -91,7 +113,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="animate" data-animate-direction="left">
         <h2>PRICING</h2>
         <h3><span class="home-intro-text-underline">Affordable</span> price plans</h3>
         <p class="section-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quasi delectus reprehenderit tempore pariatur ab dolor laudantium natus, totam ullam quos quas itaque quidem suscipit in voluptas dolorem nemo quaerat.</p>
@@ -180,7 +202,7 @@
         </div>
     </section>
 
-    <div class="contact">
+    <section class="animate contact" data-animate-direction="right">
         <form id="contact-form">
             <div class="contact-form-container contact-name">
                 <div class="contact-form-label ">
@@ -209,9 +231,9 @@
                 <label for="">Message</label>
                 <textarea name="message" placeholder="Votre message" required></textarea>
             </div>
-            <button type="submit">Envoyer</button>
-          </form> 
-          <div class="contact-info">
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+        </form> 
+        <div class="contact-info">
             <p> CONTACT US</p>
             <h2> Get in touch today</h2>
             <p> Lorem ipsum dolor sit amet consectetur adipiscing elit nulla adipiscing tincidunt interdum tellus du.</p>
@@ -219,12 +241,62 @@
             <div class="flex"><img src="./images/Email.svg" alt=""><p>contact@coded4.me</p></div>
             <div class="flex"> <img src="./images/Phone.svg" alt=""> <p>06 12 34 56 78</p></div>
             <div class="flex"> <img src="./images/Mark.svg" alt=""><p>61 rue de Lyon, Paris, 75015</p></div>
-            
-           
-            
-          </div>      
         </div>
+    </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        let isMenuOpen = false;
+
+        burger.addEventListener('click', () => {
+        if (!isMenuOpen) {
+            navLinks.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+
+            anime({
+            targets: navLinks,
+            translateY: [-50, 0],
+            opacity: [0, 1],
+            duration: 500,
+            easing: 'easeOutQuad'
+            });
+
+            isMenuOpen = true;
+        } else {
+            anime({
+            targets: navLinks,
+            translateY: [0, -50],
+            opacity: [1, 0],
+            duration: 400,
+            easing: 'easeInQuad',
+            complete: () => {
+            navLinks.style.display = 'none';
+            document.body.style.overflow = ''; // Enable scrolling
+            }
+            });
+
+            isMenuOpen = false;
+        }
+        });
+    </script>
+    <script type="module">
+        import { createAnimatable } from 'https://cdn.skypack.dev/animejs';
+      
+        const wrapper = document.querySelector('.halo-wrapper');
+      
+        const anim = createAnimatable(wrapper, {
+          x: 400,
+          y: 400,
+          ease: 'out(3)',
+        });
+      
+        window.addEventListener('mousemove', e => {
+          anim.x(e.clientX);
+          anim.y(e.clientY);
+        });
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
