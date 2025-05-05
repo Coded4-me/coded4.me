@@ -319,6 +319,10 @@ h4 {
     padding: 32px;
     color: #fffdfa;
 
+    &:last-of-type {
+      grid-column: 1 / -1;
+    }
+
     &.best-offer {
       background: transparent;
       border: 1px solid var(--main-color, #FF6F61);
