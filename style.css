@@ -354,6 +354,13 @@ h4 {
         color: #fffdfa;
         font-size: 24px;
         font-weight: 300;
+        text-decoration-thickness: 1px;
+      }
+
+      & .ht {
+        font-size: 16px;
+        font-weight: 300;
+        color: #fffdfa;
       }
     }
 
