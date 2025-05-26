@@ -134,3 +134,22 @@ cards.forEach(card => {
         });
     });
 });
+
+document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && isMenuOpen) {
+            anime({
+                targets: navLinks,
+                translateY: [0, -50],
+                opacity: [1, 0],
+                duration: 400,
+                easing: 'easeInQuad',
+                complete: () => {
+                    navLinks.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+            isMenuOpen = false;
+        }
+    });
+});
